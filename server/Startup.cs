@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
+using server.Repositories;
+using server.Services;
 
 namespace SharpList;
 
@@ -33,6 +35,9 @@ public class Startup
 
     services.AddScoped<AccountsRepository>();
     services.AddScoped<AccountService>();
+
+    services.AddScoped<HouseRepository>();
+    services.AddScoped<HouseService>();
   }
 
   private void ConfigureCors(IServiceCollection services)

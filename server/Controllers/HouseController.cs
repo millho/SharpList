@@ -9,7 +9,7 @@ using server.Services;
 namespace server.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/houses")]
     public class HouseController : ControllerBase
     {
 
@@ -24,6 +24,7 @@ namespace server.Controllers
         {
             try
             {
+
                 List<House> houses = _houseService.GetAllHouses();
                 return Ok(houses);
             }
